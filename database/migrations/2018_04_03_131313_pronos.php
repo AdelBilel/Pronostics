@@ -13,7 +13,7 @@ class Pronos extends Migration
      */
     public function up()
     {
-        Schema::table('prono', function (Blueprint $table) {
+        Schema::create('prono', function (Blueprint $table) {
            
             $table->integer('user_id')->unsigned();
             $table->integer('match_id')->unsigned();
