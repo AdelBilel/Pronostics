@@ -19,6 +19,7 @@ mix.styles([
      
 ], 'public/css/app.css') 
 .scripts([ 
+    'resources/assets/js/jquery-3.3.1.js',
     'resources/assets/js/app.js', 
     'resources/assets/js/bootstrap.js',
     'resources/assets/js/jquery.min.js',
