@@ -11,6 +11,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<title>{{ config('app.name', 'Album') }}</title>
 		<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     
@@ -29,7 +31,7 @@
 					<nav id="nav">
 						<ul class="links">
 							<li class="active"><a href="index.html">Liste des Pronos</a></li>
-							<li><a href="generic.html">Résultats Des Matchs</a></li>
+							<li><a href={{ route('match.index') }}>Résultats Des Matchs</a></li>
 							<li><a href="elements.html">Contactez-Nous</a></li>
 						</ul>
 						<ul id="icons">

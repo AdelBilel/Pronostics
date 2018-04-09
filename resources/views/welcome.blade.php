@@ -1,5 +1,7 @@
 @extends('template')
 
+
+
 @section('contenu')
 	
 				<!-- Main -->

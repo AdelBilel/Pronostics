@@ -1,6 +1,9 @@
 @extends('template')
 
+
+
 @section('contenu')
+
 
 <head>		
     <link href="{{ asset('css/register.css') }}" rel="stylesheet">
