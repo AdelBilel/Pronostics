@@ -54,6 +54,7 @@ class MatchController extends Controller
     
     public function destroy($id)
     {
-        //
+        $contact = Contact::find($id);
+        $contact->delete();
     }
 }

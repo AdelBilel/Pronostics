@@ -30,9 +30,16 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
+							@admin
+							<li class="active"><a href="index.html">Liste des Pronos</a></li>
+							<li><a href={{ route('match.index') }}>Match</a></li>
+							<li><a href={{ route('contact.create') }}>Mes Messages</a></li>
+
+							@else
 							<li class="active"><a href="index.html">Liste des Pronos</a></li>
 							<li><a href={{ route('match.index') }}>Résultats Des Matchs</a></li>
-							<li><a href="elements.html">Contactez-Nous</a></li>
+							<li><a href={{ route('contact.create') }}>Contactez Nous</a></li>
+							@endadmin
 						</ul>
 						<ul id="icons">
 						

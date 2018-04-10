@@ -24,4 +24,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/match', 'MatchController');
 
+Route::resource('/pronos', 'PronosController');
+
+Route::resource('/contact', 'ContactController');
+
+
 

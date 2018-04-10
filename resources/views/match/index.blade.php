@@ -44,6 +44,7 @@
                                 @admin
 
                                 <td><a href={{ route('match.create') }} class="btn btn-primary btn-lg active">Modifier</a></td>
+
                                 @endadmin
                                 
                             </tr>
