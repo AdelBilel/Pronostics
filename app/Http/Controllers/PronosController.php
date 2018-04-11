@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Match;
+use App\Prono;
+use App\User;
 
 class PronosController extends Controller
 {
@@ -13,7 +16,11 @@ class PronosController extends Controller
      */
     public function index()
     {
-        //
+    
+       
+        $matchs = Match::get();
+        
+        return view ('pronos.index', compact('user', 'matchs'));
     }
 
     /**
@@ -23,18 +30,16 @@ class PronosController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+    public function store(Request $request){
+
+        
+        
+        //dd($request);
+        $prono = Prono::create($request->all());
+        
     }
 
     /**
