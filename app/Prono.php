@@ -16,7 +16,7 @@ class Prono extends Authenticatable
      */
     public $table = "prono";
 
-    protected $fillable = ['match_id', 'user_id', 'score1', 'score2'];
+    protected $fillable = ['match_id', 'user_id', 'score1', 'score2', 'pseudo', 'equipe1', 'equipe2', 'point'];
     
     public $timestamps = false;
 

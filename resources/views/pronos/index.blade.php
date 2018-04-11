@@ -6,6 +6,60 @@
 <div id="main">
 <br><br><br>
 
+@admin
+<div align="center">
+<h3 class="panel-title">Pronostique</h3>
+</div>
+                <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th><span>Nom</span></th>
+                    <th><span>Equipe 1 </span></th>
+                    <th><span>Equipe 2 </span></th>
+                    <th><span>Score 1  </span></th>
+                    <th><span>Score 2</span></th>
+                    <th><span>Point </span></th>
+                    
+                    
+                    
+                </tr>
+                </thead>
+                <tbody>
+                    @foreach($pronos as $prono)
+
+
+                    <tr>
+                        <th> {{ $prono->pseudo}}</th>
+                        <th> {{ $prono->equipe1 }}</th>
+                        <th>{{ $prono->equipe2 }}</th>
+                        <th> {{ $prono->score1}}</th>
+                        <th> {{ $prono->score2}}</th>
+                        <th> {{ $prono->point}}</th>
+                        
+                        
+
+
+                    </tr>
+
+
+                    @endforeach
+
+
+
+
+                </tbody>
+                
+            </table>
+            <br><br>
+
+
+
+
+
+
+
+@else
+
         <table class="table table-striped">
                 <thead>
                     <tr>
@@ -51,6 +105,31 @@
                                           <div class="form-group">
                                 
                              
+                                                <input type="hidden" class="form-control" id="email" name="equipe1" value="{{ $match->equipe1 }}">
+                                              </div>
+
+                                              <div class="form-group">
+                                
+                             
+                                                    <input type="hidden" class="form-control" id="email" name="equipe2" value="{{ $match->equipe2 }}">
+                                                  </div>
+
+                                                  <div class="form-group">
+                                
+                             
+                                                        <input type="hidden" class="form-control" id="email" name="point" value="{{ Auth::user()->score }}">
+                                                      </div>
+
+
+                                          <div class="form-group">
+                                
+                             
+                                                <input type="hidden" class="form-control" id="email" name="pseudo" value="{{ Auth::user()->pseudo }}">
+                                              </div>
+
+                                          <div class="form-group">
+                                
+                             
                                                 <input type="hidden" class="form-control" id="email" name="match_id" value="{{ $match->id }}">
                                               </div>
               
@@ -91,7 +170,7 @@
 
 
 
-
+@endadmin
 </div>
 
 @endsection

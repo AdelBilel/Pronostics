@@ -28,5 +28,13 @@ Route::resource('/pronos', 'PronosController');
 
 Route::resource('/contact', 'ContactController');
 
+Route::get('/classement', 'ClassementController@index')->name('classement');
+
+Route::resource('profile', 'UserController', [
+    'only' => ['edit', 'update'],
+    'parameters' => ['profile' => 'user']
+]);
+
+
 
 

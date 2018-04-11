@@ -17,10 +17,10 @@ class PronosController extends Controller
     public function index()
     {
     
-       
+         $pronos =  Prono::get();
         $matchs = Match::get();
         
-        return view ('pronos.index', compact('user', 'matchs'));
+        return view ('pronos.index', compact('pronos', 'matchs'));
     }
 
     /**
