@@ -43,7 +43,8 @@
                                 <td><?php echo $resultat->resultat1 ?> - <?php echo $resultat->resultat2 ?>  </td>
                                 @admin
 
-                                <td><a href={{ route('match.create') }} class="btn btn-primary btn-lg active">Modifier</a></td>
+                                <td> <a class="btn btn-primary" href="{{ route('match.edit', $resultat->id) }}">Editer</a> </p>
+                                </td>
 
                                 @endadmin
                                 

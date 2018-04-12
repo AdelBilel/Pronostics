@@ -14,11 +14,10 @@
 									<h2><a href="#">Bienvenue Sur <br />
 									PronosDTA</a></h2>
 										<p>
-											Tous es jours vous trouverez les match de la coupe du monde<br>
-											Envie de Gagner des point et etre premier du classement ? <br>
-											Alors fait vos paris et si vous avez le bon prono vous gagnez 3 point<br>
-											A VOUS DE JOUEZ !!!!
-											
+											Tous les jours vous trouverez les matchs de la coupe du monde<br>
+                                            Envie de Gagner des points et être premier du classement ? <br>
+                                            Alors faite vos paris et si vous avez le bon prono vous gagnez 3 points<br>
+                                            A VOUS DE JOUEZ !!!!
 
 
 
@@ -26,7 +25,7 @@
 								</header>
 								<a href="#" class="image main"><img src="images/equipe.jpg" alt="" /></a>
 								<ul class="actions">
-									<li><button class="button big">C'est parti !!!</a></li>
+									<li><a href="{{ route('pronos.index') }}" class="button big">C'est parti !!!</a></li>
 								</ul>
 							</article>
 

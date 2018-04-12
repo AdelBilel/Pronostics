@@ -6,7 +6,7 @@
 <div id="main">
 <br><br><br>
 
-@admin
+@admin <!-- si l'utilisateur est admin -->
 <div align="center">
 <h3 class="panel-title">Pronostique</h3>
 </div>
@@ -59,6 +59,8 @@
 
 
 @else
+
+@auth   <!-- si l'utilisateur est connecté mais pas admin -->
 
         <table class="table table-striped">
                 <thead>
@@ -147,6 +149,8 @@
                                 <input type="submit" value="Valider"></a>
                           </form>
                         </td>
+
+          
                     
                     
                 
@@ -166,11 +170,23 @@
          <br>
 
 
-
-
-
-
+@endauth
 @endadmin
+@guest  <!-- si l'utilisateur est un invité -->
+
+<div align="center">
+
+<h1>Veuillez vous connecter pour avoir acces a cette partie</h1><br>
+<a href="{{ route('login')}} " class="button big">Se Connecter</a>
+</div>
+
+
+
+@endguest
+
+
+
+
 </div>
 
 @endsection

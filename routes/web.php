@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('/match', 'MatchController');
+Route::resource('/match', 'MatchController'); // ecrit toutes les routes lié au fonctions de MatchController ( show, create, etc...)
 
 Route::resource('/pronos', 'PronosController');
 

@@ -14,76 +14,24 @@ class PronosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index() // afficher les donnée dans une vue
     {
     
-         $pronos =  Prono::get();
-        $matchs = Match::get();
+         $pronos =  Prono::get(); // recupere toute les donnée qu 'il ya dans pronos
+        $matchs = Match::get();  // recupere toute les donnée qu 'il ya dans match
         
-        return view ('pronos.index', compact('pronos', 'matchs'));
+        return view ('pronos.index', compact('pronos', 'matchs')); // retourne une vue index
+                                                                   // dans le dossier pronos et lui envoi les données recupérés
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        
-    }
 
-    public function store(Request $request){
+    public function store(Request $request){ // Envoi les données 
 
         
         
-        //dd($request);
-        $prono = Prono::create($request->all());
         
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $prono = Prono::create($request->all());  // recupere toutes les info du formulaire et fait un insert dans la bdd
+        return view('pronos.success'); // retourne une vue
+        
     }
 }

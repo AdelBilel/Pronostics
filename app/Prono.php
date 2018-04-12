@@ -14,10 +14,10 @@ class Prono extends Authenticatable
      *
      * @var array
      */
-    public $table = "prono";
+    public $table = "prono";  // il va interagir avec la table prono
 
-    protected $fillable = ['match_id', 'user_id', 'score1', 'score2', 'pseudo', 'equipe1', 'equipe2', 'point'];
+    protected $fillable = ['match_id', 'user_id', 'score1', 'score2', 'pseudo', 'equipe1', 'equipe2', 'point']; // les champs qui doivent etre rempli
     
-    public $timestamps = false;
+    public $timestamps = false; // pas besoin du timestamps
 
 }

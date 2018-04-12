@@ -43,12 +43,21 @@ class MatchController extends Controller
     
     public function edit($id)
     {
-        //
+        $match = Match::findOrFail($id);
+        
+        return view('match.edit', compact('match'));
+        
     }
 
     public function update(Request $request, $id)
     {
-        //
+       
+        $match = Match::findOrFail($id);
+        
+        
+        $match->update($request->all());
+        
+        return redirect(route('match.index', $id));
     }
 
     
