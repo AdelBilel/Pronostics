@@ -29,12 +29,41 @@
 
 
                     <tr>
-                        <th> {{ $prono->pseudo}}</th>
-                        <th> {{ $prono->equipe1 }}</th>
-                        <th>{{ $prono->equipe2 }}</th>
-                        <th> {{ $prono->score1}}</th>
-                        <th> {{ $prono->score2}}</th>
-                        <th> {{ $prono->point}}</th>
+                        <td> {{ $prono->pseudo}}</td>
+                        <td> {{ $prono->equipe1 }}</td>
+                        <td>{{ $prono->equipe2 }}</td>
+                        <td> {{ $prono->score1}}</td>
+                        <td> {{ $prono->score2}}</td>
+                        <td>
+<br>
+                                {!! Form::open(['class' => 'form-inline', 'method' => 'put', 'url' => route('pronos.update', $prono)]) !!}
+                                {{ csrf_field() }}
+                                
+                                            
+                                <div class="form-group">
+                                
+                                
+                                
+                                
+                                {!! Form::number('point', $prono->point, ['class' => "form-control"]) !!}
+                                
+                                </div>
+
+
+
+                        </td>
+                        <td>
+
+                                <div class="form-group">
+                                        <div class="col-md-6 col-md-offset-4">
+                                            <button type="submit" class="btn btn-primary">
+                                                Valider
+                                            </button>
+                                        </div>
+
+                                </div></td>
+
+                                {!! Form::close() !!}
                         
                         
 

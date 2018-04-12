@@ -31,14 +31,14 @@
 					<nav id="nav">
 						<ul class="links">
 							@admin
-							<li class="active"><a href="index.html">Accueil</a></li>
+							<li class="active"><a href="{{route('accueil')}}">Accueil</a></li>
 							<li><a href={{ route('match.index') }}>Match</a></li>
 							<li><a href={{ route('pronos.index') }}>Pronostique</a></li>
 							
 							<li><a href={{ route('contact.create') }}>Mes Messages</a></li>
 
 							@else
-							<li class="active"><a href="index.html">Accueil</a></li>
+							<li class="active"><a href="{{route('accueil')}}">Accueil</a></li>
 							@auth
 							<li><a href={{ route('pronos.index') }}>Pronostiques</a></li>
 							@endauth

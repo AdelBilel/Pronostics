@@ -34,4 +34,26 @@ class PronosController extends Controller
         return view('pronos.success'); // retourne une vue
         
     }
+
+    public function update(Request $request, $id)
+    {
+       
+        $prono = Prono::findOrFail($id);
+        
+        
+        $prono->update($request->all());
+
+        return redirect(route('accueil'));
+        
+        
+    }
+
+    public function edit($id)
+    {
+        $prono = Prono::findOrFail($id);
+        
+        return view('pronos.index', compact('prono'));
+        
+    }
+
 }
