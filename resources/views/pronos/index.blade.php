@@ -115,8 +115,15 @@
                 <th scope="row"><?php echo $match->id ?></th> 
                 <td><?php echo $match->equipe1 ?>    </td>
                 <td><?php echo $match->equipe2 ?>   </td>
-                <td> 
+                @if($match->match_termine == 1)
+                <td>Match fini </td>
+                <td>Match fini</td>
+                <td></td>
+                @else
+                <td>
                     <br>
+
+                    
 
                         <form class="form-inline" action="{{ route('pronos.store') }}" method="POST">
                                 {{ csrf_field() }}
@@ -179,7 +186,7 @@
                           </form>
                         </td>
 
-          
+          @endif
                     
                     
                 
